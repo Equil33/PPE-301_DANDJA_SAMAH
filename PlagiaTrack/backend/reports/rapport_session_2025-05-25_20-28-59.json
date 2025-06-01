@@ -1,0 +1,12 @@
+{
+    "rapport_id": "RPT-20250525-202859",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/SOLO_AI.txt"
+    ],
+    "taux_similarite": 0,
+    "indice_suspicion_IA": 40.57,
+    "sections_similaires": [],
+    "analyse_effectuee_le": "2025-05-25 20:28:59",
+    "statut": "Pas de plagiat detecte",
+    "recommendation": "Aucun probleme detecte."
+}

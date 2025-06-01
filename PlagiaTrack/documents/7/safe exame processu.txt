@@ -1,0 +1,14 @@
+safe exame processus
+_Aller sur Moodle. 
+_Se connecter.
+_nom:faiz.dandja@ipnetinstitute.com
+_allez dans l'anglet cours
+_trouver le cours simulation
+
+
+supprimer une configuration problematique:
+_Win+r
+_appdata
+_Roaming
+_SafeExamBrowser
+_supprimer xxxxx

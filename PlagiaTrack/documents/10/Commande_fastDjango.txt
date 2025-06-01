@@ -1,0 +1,20 @@
+Commande_fastDjango
+
+
+
+etudiant1 = Etudiant.objects.create(nom="Alice Dupont", date_naissance="2000-05-15", filiere="Informatique")
+etudiant2 = Etudiant.objects.create(nom="Bob Martin", date_naissance="1999-11-20", filiere="Mathématiques")
+etudiant3 = Etudiant.objects.create(nom="Abalo Kokou", date_naissance="2002-01-10", filiere="Informatique")
+
+
+ue1 = UE.objects.create(code="INF101", titre="Introduction à la Programmation")
+ue2 = UE.objects.create(code="MAT202", titre="Algèbre Linéaire")
+ue3 = UE.objects.create(code="MAT201", titre="Une matière de l'informatique")
+
+
+
+Inscription.objects.create(etudiant=etudiant1, ue=ue1, date_inscription="2025-01-10")
+Inscription.objects.create(etudiant=etudiant1, ue=ue2, date_inscription="2025-01-11")
+Inscription.objects.create(etudia4nt=etudiant2, ue=ue1, date_inscription="2025-01-12")
+Inscription.objects.create(etudiant=etudiant2, ue=ue2, date_inscription="2025-01-13")
+Inscription.objects.create(etudiant=etudiant3, ue=ue3, date_inscription="2025-02-07")

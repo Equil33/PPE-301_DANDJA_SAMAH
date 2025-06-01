@@ -1,0 +1,20 @@
+{
+    "rapport_id": "RPT-20250527-133307",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/CSC 301 - seance 2.pdf",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DAN.txt"
+    ],
+    "taux_similarite": 0,
+    "indice_suspicion_IA": 37.56,
+    "sections_similaires": [
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/CSC 301 - seance 2.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DAN.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        }
+    ],
+    "analyse_effectuee_le": "2025-05-27 13:33:07",
+    "statut": "Pas de plagiat detecte",
+    "recommendation": "Aucun probleme detecte."
+}

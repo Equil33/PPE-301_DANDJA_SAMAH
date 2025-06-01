@@ -1,0 +1,292 @@
+Projet PlagiaTrack: 
+
+
+
+Sujet et contexte :
+
+I.Contexte du projet
+ De nos jours, l'utilisation des inteligences artificie les (IA) occupe une place
+ importante dans de nombreux domaines tels que l'apprentissage, l'automatisation, et
+ la recherche. Leur développement connaît d'énormes avancées et leur usage
+ devient de plus en plus fréquent dans notre quotidien.
+ Le Projet Professionnel Étudiant (PPE) vise à créer une application de détection de
+ plagiat basée sur une IA capable d'analyser des textes écrits sous différents formats.
+ Ce projet s'inscrit dans une démarche de soutien aux enseignants et aux
+ établissements éducatifs dans la lutte contre le plagiat.
+ Le plagiat académique étant un problème important dans de nombreux
+ établissements, il est nécessaire de développer un outil efficace pour aider les
+ enseignants à identifier et à lutter contre ce phénomène.
+
+II.Objectifs du projet
+ Le plagiat est une pratique consistant à recopier totalement ou partie lement du
+ texte à origine multiple. Notre projet portera sur la détection de similitude (Plagiat) de
+ documents ou de sites. Sur ce fait , notre projet pour objectif de détecter ces
+ similitudes et en émettre un pourcentage de similitude .
+
+
+III.Description fonctionne le des besoins
+ Le plagiat est une pratique perçue dans différents domaines. Les domaines où c’est
+ le plus remarquable sont en milieu scolaire et universitaire. Les principaux acteurs
+ sont les étudiants et les professeurs en milieu académique.
+ Dans le cadre scolaire et universitaire, les étudiants sont régulièrement amenés à
+ rendre des devoirs de classe. Pour cela, ils soumettent différents types de
+ documents contenant les exercices qu'ils ont traités. Cependant, ces travaux
+ peuvent être copiés par d'autres étudiants et soumis comme leur propre travail.
+ Certains d’entre eux par paresse, copient les devoir des autres à la recherche d’une
+ mei leure note, c’est un comportement totalement répréhensible et blâmable ; et rend
+ les véritables auteurs vulnérables aux accusations de plagiat ; dans l’éventualité où
+ ceux-ci ne sont pas au courant ou non informé. Notre projet vise à résoudre ce
+problème en fournissant une interface pour la soumission de documents, prenant en
+ charge plusieurs formats (docx, pdf, txt), et en permettant la conversion de
+ documents en cas d'incompatibilité pour une analyse plus efficace. Le fait de pouvoir
+ détecter les plagiats, permet un gain de temps et une résolution du problème.
+ Les enseignants, dans le cadre de leurs fonctions, évaluent les devoirs soumis
+ par les étudiants. Le plagiat entre étudiants est perçu comme une tricherie qui
+ compromet l’intégrité académique et démontre un manque d’engagement et de
+ compréhension des matières. Cela complique leur tâche d’évaluation et remet en
+ question l’équité du processus éducatif. La correction est une tâche pénible dans la
+ mesure où des étudiants soumettent des devoirs identiques. Notre projet a pour but
+ d’a léger la tâche, c’est à dire d’analyser les textes et de détecter les similitudes de
+ manière précise, évitant les faux positifs dus à des mots similaires. En outre, ele
+ génère un rapport de plagiat détailé, indiquant le pourcentage de similitude et les
+ sections concernées, ce qui aide les professeurs à identifier et à traiter les cas de
+ plagiat de manière équitable et efficace.
+ Notons que l'utilisation de contenus trouvés en ligne par les étudiants constitue un
+ défi majeur pour l'intégrité académique. Cette pratique, qui trahit un manque
+ d'investissement personnel et de compréhension des cours, nuit à la qualité de
+ l'éducation. En se contentant de copier des informations disponibles sur internet, les
+ étudiants passent à côté du développement de compétences analytiques et critiques
+ essentie les pour leur avenir. Notre projet se propose d'examiner les travaux soumis
+ afin de repérer avec précision les cas de plagiat en ligne ainsi que la possibilité
+ d’être accessible et facile d’utilisation par les utilisateurs
+
+
+Projet PlagiaTrack: 
+
+Création du projet et la liste des fonctionnalité avoir dans le projet PlagiaTrack: 
+
+
+1. Authentification et gestion des utilisateurs
+Utilisateurs :
+Administrateur
+
+Étudiant
+
+Professeur
+
+Fonctionnalités :
+Se connecter / s’authentifier
+
+Ajouter un utilisateur (admin)
+
+Supprimer un utilisateur (admin ou sur demande)
+
+Réprimander un utilisateur (admin)
+
+Gérer les permissions (admin)
+
+Gérer les rôles (admin)
+
+
+
+2. Soumission et gestion des documents
+Actions possibles :
+Soumettre un ou plusieurs documents pour analyse
+
+Enregistrer des documents pour soumission future
+
+Supprimer des documents (par l’étudiant, professeur ou administrateur)
+
+Conversion automatique de documents non compatibles
+
+Support des formats : .docx, .pdf, .txt
+
+Vérification du format et validité des documents soumis
+
+
+
+3. Analyse de plagiat
+Types d’analyse :
+
+selection de document groupés
+
+ajout d'une barre de recherche pour afficher les documents que l'on veux..
+
+possibilité de créer des groupes de documents directement sur le site de manière à créer un groupe et à y ajouter les documents que l'on souhaite
+
+Comparaison entre documents soumis (base interne)
+
+Comparaison avec des sources en ligne (via API externes et solution interne pour detection ia sans internet, ex : Google Search)
+
+Détection fine avec algorithmes NLP et Machine Learning (spaCy, NLTK, transformers, etc.)
+
+Options :
+Choix manuel de ressources pour la comparaison
+
+Configuration de paramètres d’analyse personnalisés
+
+Programmation d’analyses automatiques périodiques
+
+
+
+4. Gestion des rapports de plagiat
+Génération automatique de rapports de similitude
+
+Affichage du pourcentage de plagiat
+
+Visualisation des sections plagiées
+
+Affichage côte à côte du texte plagié et de la source
+
+Filtrage des sections par taux de similitude
+
+Téléchargement du rapport (PDF, Word, etc.)
+
+Sauvegarde/archivage de rapports
+
+Suppression de rapports
+
+Journalisation des actions sur les rapports
+
+Gestion des formats de rapport
+
+Notification à la fin de l’analyse
+
+
+
+5. Notifications
+Notification par e-mail ou dans l’interface :
+
+Fin d’analyse
+
+Rapport disponible
+
+Confirmation d’enregistrement/suppression de document
+
+L’utilisateur peut activer/désactiver les notifications
+
+
+
+6. Administration et supervision du système
+Supervision complète du système par l’Administrateur
+
+Nettoyage des documents ou rapports obsolètes
+
+Configuration des règles d’accès et des permissions
+
+Application de sanctions disciplinaires
+
+Journalisation des actions critiques (audit)
+
+
+
+7. Aspects techniques & architecture (en local)
+🖥️ Frontend (Interface Utilisateur - local)
+Technologies utilisées :
+
+HTML : pour la structure des pages
+
+CSS : pour le style
+
+JavaScript + jQuery : pour les interactions dynamiques (soumission de formulaire, alertes, mise à jour de l’interface sans rechargement complet)
+
+Fonctionnalités prévues côté client :
+
+Formulaires de connexion, soumission et gestion des documents
+
+Visualisation des rapports de plagiat
+
+Alertes/notifications locales (modal jQuery, popups, etc.)
+
+Interface simple mais intuitive pour les étudiants, professeurs, et administrateurs
+
+🧠 Backend (local - PHP + Python)
+🐘 PHP (serveur web principal)
+Sert d’interface principale entre le frontend et la logique métier
+
+Traite :
+
+Authentification (connexion, rôles)
+
+Gestion des utilisateurs (ajout, modification, suppression, permissions)
+
+Enregistrement, suppression des documents
+
+Stockage dans base de données
+
+Gestion des fichiers sur disque local
+
+Appels internes au script Python pour analyse
+
+🐍 Python (module d’analyse de plagiat)
+Utilisé uniquement pour analyser le contenu des documents
+
+Exécuté depuis PHP via shell_exec() ou système équivalent
+
+Fonctions Python :
+
+Analyse de similarité textuelle (TF-IDF, Cosine Similarity, etc.)
+
+Détection de contenu généré par IA en local (basé sur des règles linguistiques/statistiques)
+
+Génération de rapports de plagiat (JSON ou fichier à lire par PHP)
+
+Librairies Python utilisées (toutes installables localement) :
+
+scikit-learn, difflib, spaCy, NLTK, pandas, numpy
+
+🗄️ Base de données (locale)
+SGBD : xampp phpmyadmin
+
+Sert à :
+
+Gérer les comptes utilisateurs et leurs rôles
+
+Enregistrer les informations sur les documents soumis
+
+Sauvegarder les résultats et rapports de plagiat
+
+Tracer l’activité des utilisateurs (journalisation)
+
+📂 Gestion des documents et rapports
+Les documents sont stockés dans des répertoires locaux :
+
+Organisés par utilisateur, type, ou date
+
+Formats acceptés : .pdf, .docx, .txt
+
+Sauvegarde locale des rapports générés par Python :
+
+Format .json, .pdf ou .txt
+
+Téléchargeables via l’interface PHP
+
+🛡️ Sécurité et permissions (locales)
+Authentification gérée en PHP (sessions, mots de passe hashés)
+
+Permissions par rôle :
+
+Admin : tout accès
+
+Professeur : soumission, analyse, visualisation de rapports
+
+Étudiant : soumission uniquement, visualisation des documents soumis
+
+Pas de connexion Internet = pas de fuite de données
+
+🛠️ Autres composants internes
+Convertisseur de documents :
+
+Utilisation de bibliothèques Python (python-docx, PyPDF2) pour convertir en .txt avant l’analyse
+
+Mécanisme de notification locale :
+
+Alertes via interface (pas de mails)
+
+Affichage dynamique avec jQuery
+
+
+
+Avant debut du travail: Prendre toutes les fonctionnalités sans exceptions  pour commencer ,fournir la table sql dans le language SQL pour crétion dans le xampp phpmy admin manuelement. parle moi toujours français. Le projet et les tables et attributs et autres doivent aussi être en français. Ajoute aussi le nom de la base de donnée. Créer aussi un super administrateur unique avec un nom, mot de passe et etc... créés à la première connexion au site(l'utilisateur doit rentrer les informations du super admin).
+
+Il est important que tu sache qu'en dehors de creer la base de données je ne ferais rien d'autre et tu devrais faire l'entierté du reste du projet toi meme. Il est obligatoire de respecter le fonctionnement de toute les fonctionnalités dans le projet.

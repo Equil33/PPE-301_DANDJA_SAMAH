@@ -1,0 +1,188 @@
+{
+    "rapport_id": "RPT-20250527-132307",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf"
+    ],
+    "taux_similarite": 78.02,
+    "indice_suspicion_IA": 49.3,
+    "sections_similaires": [
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/autre.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Commande_fastDjango.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_&_DAGAN_ISM210_TP7.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "score_similarite": 0.7802494261838976,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz_RAPPORT-TP6.pdf",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        },
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Django process projet.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf",
+            "score_similarite": 0.0001,
+            "sections_similaires": []
+        }
+    ],
+    "analyse_effectuee_le": "2025-05-27 13:23:07",
+    "statut": "Plagiat probable",
+    "recommendation": "Verification manuelle recommandee."
+}

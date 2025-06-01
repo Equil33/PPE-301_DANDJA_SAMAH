@@ -1,0 +1,12 @@
+{
+    "rapport_id": "RPT-20250525-210719",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx"
+    ],
+    "taux_similarite": 0,
+    "indice_suspicion_IA": 23.13,
+    "sections_similaires": [],
+    "analyse_effectuee_le": "2025-05-25 21:07:19",
+    "statut": "Pas de plagiat detecte",
+    "recommendation": "Aucun probleme detecte."
+}

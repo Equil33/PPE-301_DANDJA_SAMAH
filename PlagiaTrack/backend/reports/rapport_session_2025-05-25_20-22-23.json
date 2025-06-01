@@ -1,0 +1,31 @@
+{
+    "rapport_id": "RPT-20250525-202223",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DAN2.txt",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DAN3.txt"
+    ],
+    "taux_similarite": 89.56,
+    "indice_suspicion_IA": 28.52,
+    "sections_similaires": [
+        {
+            "document1": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DAN2.txt",
+            "document2": "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DAN3.txt",
+            "score_similarite": 0.8955770111920973,
+            "sections_similaires": [
+                {
+                    "extrait_document_1": "Test plagiat: \ndébut du XXe\n Renommé pour ses scènes militaires et l'abondance de son travail en uniformologie, il \nest considéré comme un grand spécialiste de la peinture militaire française, faisant de \nlui l'un des derniers maîtres du genre avant que celui-ci disparaisse progressivement au \nsiècle. Il s'inscrit dans la continuité des peintres néoclassiques et \nromantiques du Premier Empire et de la légende napoléonienne, comme François \nGérard ou Horace Vernet, dont l'héritage est reçu favorablement dans l'art académique \nde la seconde moitié du XIXe siècle. Il s'insère dans une logique de représentation au \n",
+                    "extrait_document_2": "Test plagiat: \ndébut du XXe\n Renommé pour ses scènes militaires et l'abondance de son travail en uniformologie, il \nest considéré comme un grand spécialiste de la peinture militaire française, faisant de \nlui l'un des derniers maîtres du genre avant que celui-ci disparaisse progressivement au \nsiècle. Il s'inscrit dans la continuité des peintres néoclassiques et \nromantiques du Premier Empire et de la légende napoléonienne, comme François \nGérard ou Horace Vernet, dont l'héritage est reçu favorablement dans l'art académique \nde la seconde moitié du XIXe siècle. Il s'insère dans une logique de représentation au \n",
+                    "similarite": 0.8258154059680777
+                },
+                {
+                    "extrait_document_1": "\nIl devient célèbre en son temps par ses toiles représentant tragiquement et de façon \nparfois très crue la guerre franco-allemande de 1870, intégrant aussi les actions \nhéroïques réalisées par les Français, et est resté principalement dans la postérité par \nson tableau réalisé en 1888 intitulé Le Rêve, exaltant les gloires militaires passées dans \nun contexte politique post-conflit tendu entre la France et l'Allemagne. Il vit \nprincipalement à Paris et Ville-d'Avray. Le fonds d'atelier de l'artiste est conservé au \nmusée de l'Armée à Paris depuis 1915.",
+                    "extrait_document_2": "\nIl devient célèbre en son temps par ses toiles représentant tragiquement et de façon \nparfois très crue la guerre franco-allemande de 1870, intégrant aussi les actions \nhéroïques réalisées par les Français, et est resté principalement dans la postérité par \nson tableau réalisé en 1888 intitulé Le Rêve, exaltant les gloires militaires passées dans \nun contexte politique post-conflit tendu entre la France et l'Allemagne. Il vit \nprincipalement à Paris et Ville-d'Avray. Le fonds d'atelier de l'artiste est conservé au \nmusée de l'Armée à Paris depuis 1915.",
+                    "similarite": 0.8258154059680777
+                }
+            ]
+        }
+    ],
+    "analyse_effectuee_le": "2025-05-25 20:22:23",
+    "statut": "Plagiat probable",
+    "recommendation": "Verification manuelle recommandee."
+}

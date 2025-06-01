@@ -1,0 +1,8 @@
+
+Launcher Started
+
+dans un seul fichier html fait en sorte que Web.html affiche dans un premier temps un baleau , avec un partie en haut avec ecris formulaire et de l'autre coté Acceuil. Dans acceuil en bas écris "Bonjour, Bienvenu". Losque qu'on appuis sur formulaire le contenu du tableau change et, le formulaire avec nom, prenom, Age et en bas deux boutons, un valide et un annuler. je ne sais pas comment faire mais sache que la contrainte est de faire en sorte que toute celà soit sur un seul fichier html.
+
+fait en sorte que losque l'on appuis sur acceuil celà nous affiche m'acceuil
+
+non, dès le début celà doit afficher l'acceuil

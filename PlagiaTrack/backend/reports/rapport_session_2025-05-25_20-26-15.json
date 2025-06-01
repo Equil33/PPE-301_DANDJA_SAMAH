@@ -1,0 +1,12 @@
+{
+    "rapport_id": "RPT-20250525-202615",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faïz_MANUEL_PRESENTATION.pdf"
+    ],
+    "taux_similarite": 0,
+    "indice_suspicion_IA": 44.64,
+    "sections_similaires": [],
+    "analyse_effectuee_le": "2025-05-25 20:26:15",
+    "statut": "Pas de plagiat detecte",
+    "recommendation": "Aucun probleme detecte."
+}

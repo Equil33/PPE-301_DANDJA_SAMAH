@@ -1,0 +1,13 @@
+{
+    "rapport_id": "RPT-20250525-201253",
+    "documents_compares": [
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/DANDJA_Faiz-DWM-TP_4-IT 211_2.docx",
+        "C:\\xampp\\htdocs\\PlagiaTrack\\backend/../documents/10/Tableau jquery fonction et evenements.pdf"
+    ],
+    "taux_similarite": 0,
+    "indice_suspicion_IA": 51.3,
+    "sections_similaires": [],
+    "analyse_effectuee_le": "2025-05-25 20:12:53",
+    "statut": "Pas de plagiat détecté",
+    "recommendation": "Aucun problème détecté."
+}

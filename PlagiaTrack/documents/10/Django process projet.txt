@@ -1,0 +1,706 @@
+Django process projet
+
+__________________________________________
+django-admin startproject portBudget
+
+py manage.py startapp backend
+
+code .
+
+
+__________________________________________
+
+from django.db import models
+from django.contrib.auth.models import User
+
+class Utilisateur(models.Model):
+    nom = models.CharField(max_length=50)
+    email = models.EmailField(unique=True)
+    mot_de_passe = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.nom
+
+class Categorie(models.Model):
+    nom = models.CharField(max_length=50)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nom
+
+class Transaction(models.Model):
+    TYPE_CHOICES = [
+        ('revenu', 'Revenu'),
+        ('depense', 'Dépense'),
+    ]
+    montant = models.DecimalField(max_digits=10, decimal_places=2)
+    date = models.DateField()
+    categorie = models.ForeignKey(Categorie, on_delete=models.CASCADE)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    type = models.CharField(max_length=7, choices=TYPE_CHOICES)
+    description = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.type} - {self.montant} - {self.date}"
+
+class Budget(models.Model):
+    montant = models.DecimalField(max_digits=10, decimal_places=2)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Budget - {self.montant}"
+
+class Rapport(models.Model):
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    contenu = models.TextField()
+    date_generation = models.DateField()
+
+    def __str__(self):
+        return f"Rapport du {self.date_generation} - {self.utilisateur.nom}"
+
+________________________________________
+
+
+CREATE DATABASE SuivieDepenses;
+
+
+
+INSTALLED_APPS = [
+    'backend',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': ' exambiblio',  
+        'USER': 'postgres',         
+        'PASSWORD': 'AllGod33',       
+        'HOST': 'localhost',        
+        'PORT': '5432',               
+    }
+}
+
+
+
+____________________________________
+
+py manage.py makemigrations backend
+
+py manage.py migrate
+
+py manage.py sqlmigrate backend 0001
+
+python manage.py runserver
+
+
+http://127.0.0.1:8000/APP00/index
+______________________________________
+
+python manage.py shell
+
+from backend.models import Produit, Vente, VenteProduit, Facture, TableauDeBord
+
+# Insérer des produits
+p1 = Produit.objects.create(nom="Lait", categorie="Alimentaire", prix=2.50, quantite_stock=50)
+p2 = Produit.objects.create(nom="Savon", categorie="Cosmétique", prix=1.20, quantite_stock=100)
+p3 = Produit.objects.create(nom="Stylo", categorie="Fournitures", prix=0.80, quantite_stock=200)
+
+# Créer une vente
+vente = Vente.objects.create(total_paye=5.00)
+
+# Ajouter des produits à la vente
+VenteProduit.objects.create(vente=vente, produit=p1, quantite=2)
+
+# Générer une facture
+facture = vente.generer_facture()
+
+# Mettre à jour le tableau de bord
+tableau = TableauDeBord.objects.first()
+if not tableau:
+    tableau = TableauDeBord.objects.create()
+tableau.mettre_a_jour_statistiques()
+
+# Vérifier les ventes et factures
+print(Vente.objects.all())
+print(Facture.objects.all())
+print(TableauDeBord.objects.all())
+
+
+
+
+
+#verification:::::
+
+print(Produit.objects.all())  # Voir tous les produits
+print(Vente.objects.all())  # Voir toutes les ventes
+print(Facture.objects.all())  # Voir toutes les factures
+print(TableauDeBord.objects.all())  # Voir les statistiques
+
+
+
+______________________________________
+créer le lien urls.py de mon projet GesBoutique pour mon application backend
+
+
+projet:
+urls:
+
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('backend.urls')),
+]
+
+
+_____________________________________
+
+app:
+
+urls:
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('portBudget/', views.liste_livres, name='liste_livres'),
+]
+
+_____________________________________
+
+
+
+
+
+
+
+
+
+s'il te plait beaucoup de pages et choses de marchent pas; recommence. par exemple stat_ventes: Could not parse the remainder: '('%Y-%m-%d %H:%M')' from 'vente.date.strftime('%Y-%m-%d %H:%M')'; supprimer_produit ne marche pas non plus; modifier produit ne marche pas non plus, tu n'as meme pas codé dispo_produit et mj_produit pour la mise à jour. Recommence tout s'il te plait. Je te donne le droit de créer des dossiers et fichiers si nécéssaire et à en supprimer.
+
+
+
+
+
+
+
+
+fait moi ce projet django  de  a à z; il se base sur ce cahier des charges. Fait tout par toi meme; et utilise sqlite pour la base de donnée. voici le cahier des charge du projet :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fait moi ce projet django  de  a à z; il se base sur ce cahier des charges. Fait tout par toi meme; et utilise sqlite pour la base de donnée. voici le cahier des charge du projet : Projet : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+from django.db import models
+
+# Enum pour le statut de l'étudiant
+class StatutEtudiant(models.TextChoices):
+    ACTIF = 'Actif', 'Actif'
+    EXPIRE = 'Expiré', 'Expiré'
+
+# Modèle Etudiant
+class Etudiant(models.Model):
+    nom = models.CharField(max_length=255)
+    prenom = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    date_abonnement = models.DateField()
+    statut = models.CharField(
+        max_length=10,
+        choices=StatutEtudiant.choices,
+        default=StatutEtudiant.ACTIF
+    )
+
+    def __str__(self):
+        return f"{self.nom} {self.prenom} - {self.statut}"
+
+# Modèle Ressource
+class Ressource(models.Model):
+    titre = models.CharField(max_length=255)
+    domaine = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.titre
+
+# Modèle Emplacement
+class Emplacement(models.Model):
+    rayon = models.CharField(max_length=100)
+    etagere = models.IntegerField()
+
+    def __str__(self):
+        return f"Rayon: {self.rayon}, Étagère: {self.etagere}"
+
+# Modèle Exemplaire (lié à Ressource)
+class Exemplaire(models.Model):
+    numero_exemplaire = models.IntegerField(unique=True)
+    date_abonnement = models.DateField()
+    ressource = models.ForeignKey(Ressource, on_delete=models.CASCADE, related_name="exemplaires")
+
+    def __str__(self):
+        return f"Exemplaire {self.numero_exemplaire} de {self.ressource.titre}"
+
+# Modèle Emprunt (avec une table intermédiaire pour ManyToMany)
+class Emprunt(models.Model):
+    etudiant = models.ForeignKey(Etudiant, on_delete=models.CASCADE, related_name="emprunts")
+    date_emprunt = models.DateField(auto_now_add=True)
+    retour = models.DateField()
+
+    def __str__(self):
+        return f"Emprunt {self.id} - {self.etudiant}"
+
+# Table intermédiaire pour gérer ManyToMany avec des métadonnées
+class EmpruntExemplaire(models.Model):
+    emprunt = models.ForeignKey(Emprunt, on_delete=models.CASCADE)
+    exemplaire = models.ForeignKey(Exemplaire, on_delete=models.CASCADE)
+    date_retour_effectif = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.exemplaire} emprunté le {self.emprunt.date_emprunt}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from datetime import datetime
+from backend.models import Etudiant, Emprunt, Exemplaire, Ressource, EmpruntExemplaire
+
+
+etudiant1 = Etudiant.objects.create(
+    nom="Koffi", 
+    prenom="Amévi", 
+    email="amevi.koffi@email.com", 
+    date_abonnement=datetime.strptime("12/02/2020", "%d/%m/%Y"), 
+    statut="Actif"
+)
+
+etudiant2 = Etudiant.objects.create(
+    nom="Ahoué", 
+    prenom="Rita", 
+    email="rita.ahoue@email.com", 
+    date_abonnement=datetime.strptime("15/06/2021", "%d/%m/%Y"), 
+    statut="Actif"
+)
+
+etudiant3 = Etudiant.objects.create(
+    nom="Mensah", 
+    prenom="Paul", 
+    email="paul.mensah@email.com", 
+    date_abonnement=datetime.strptime("01/12/2021", "%d/%m/%Y"), 
+    statut="Expiré"
+)
+
+ressource1 = Ressource.objects.create(titre="Programmation en Python", domaine="Informatique")
+ressource2 = Ressource.objects.create(titre="Algèbre Linéaire", domaine="Mathématiques")
+
+
+exemplaire1 = Exemplaire.objects.create(numero_exemplaire=101, date_abonnement=datetime(2020, 2, 12), ressource=ressource1)
+exemplaire2 = Exemplaire.objects.create(numero_exemplaire=102, date_abonnement=datetime(2021, 6, 15), ressource=ressource2)
+
+
+emprunt1 = Emprunt.objects.create(etudiant=etudiant1, retour=datetime(2024, 3, 1))
+emprunt2 = Emprunt.objects.create(etudiant=etudiant2, retour=datetime(2024, 3, 5))
+
+
+EmpruntExemplaire.objects.create(emprunt=emprunt1, exemplaire=exemplaire1, date_retour_effectif=datetime(2024, 2, 28))
+EmpruntExemplaire.objects.create(emprunt=emprunt2, exemplaire=exemplaire2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from django.db import models
+from datetime import datetime
+
+# Create your models here.
+
+# Modèle Etudiant
+class Etudiant(models.Model):
+    nom = models.CharField(max_length=255)
+    prenom = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    date_abonnement = models.DateField()
+    statut = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.nom} {self.prenom} - {self.statut}"
+
+# Modèle Ressource
+class Ressource(models.Model):
+    titre = models.CharField(max_length=255)
+    domaine = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.titre
+
+# Modèle Emplacement
+class Emplacement(models.Model):
+    rayon = models.CharField(max_length=100)
+    etagere = models.IntegerField()
+
+    def __str__(self):
+        return f"Rayon: {self.rayon}, Étagère: {self.etagere}"
+
+# Modèle Exemplaire (lié à Ressource)
+class Exemplaire(models.Model):
+    numero_exemplaire = models.IntegerField(unique=True)
+    date_abonnement = models.DateField()
+    ressource = models.ForeignKey(Ressource, on_delete=models.CASCADE, related_name="exemplaires")
+
+    def __str__(self):
+        return f"Exemplaire {self.numero_exemplaire} de {self.ressource.titre}"
+
+# Modèle Emprunt (avec une table intermédiaire pour ManyToMany)
+class Emprunt(models.Model):
+    etudiant = models.ForeignKey(Etudiant, on_delete=models.CASCADE, related_name="emprunts")
+    date_emprunt = models.DateField(auto_now_add=True)
+    retour = models.DateField()
+
+    def __str__(self):
+        return f"Emprunt {self.id} - {self.etudiant}"
+
+# Table intermédiaire pour gérer ManyToMany avec des métadonnées
+class EmpruntExemplaire(models.Model):
+    emprunt = models.ForeignKey(Emprunt, on_delete=models.CASCADE)
+    exemplaire = models.ForeignKey(Exemplaire, on_delete=models.CASCADE)
+    date_retour_effectif = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.exemplaire} emprunté le {self.emprunt.date_emprunt}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+etudiant1 = Etudiant.objects.create(
+    nom="Koffi", 
+    prenom="Amévi", 
+    email="amevi.koffi@email.com", 
+    date_abonnement=datetime.strptime("12/02/2020", "%d/%m/%Y"), 
+    statut="Actif"
+)
+
+etudiant2 = Etudiant.objects.create(
+    nom="Ahoué", 
+    prenom="Rita", 
+    email="rita.ahoue@email.com", 
+    date_abonnement=datetime.strptime("15/06/2021", "%d/%m/%Y"), 
+    statut="Actif"
+)
+
+etudiant3 = Etudiant.objects.create(
+    nom="Mensah", 
+    prenom="Paul", 
+    email="paul.mensah@email.com", 
+    date_abonnement=datetime.strptime("01/12/2021", "%d/%m/%Y"), 
+    statut="Expiré"
+)
+
+ressource1 = Ressource.objects.create(titre="Programmation en Python", domaine="Informatique")
+ressource2 = Ressource.objects.create(titre="Algèbre Linéaire", domaine="Mathématiques")
+
+exemplaire1 = Exemplaire.objects.create(numero_exemplaire=101, date_abonnement=datetime(2020, 2, 12), ressource=ressource1)
+exemplaire2 = Exemplaire.objects.create(numero_exemplaire=102, date_abonnement=datetime(2021, 6, 15), ressource=ressource2)
+
+emprunt1 = Emprunt.objects.create(etudiant=etudiant1, retour=datetime(2024, 3, 1))
+emprunt2 = Emprunt.objects.create(etudiant=etudiant2, retour=datetime(2024, 3, 5))
+
+EmpruntExemplaire.objects.create(emprunt=emprunt1, exemplaire=exemplaire1, date_retour_effectif=datetime(2024, 2, 28))
+EmpruntExemplaire.objects.create(emprunt=emprunt2, exemplaire=exemplaire2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fait moi ce projet django  de  a à z; il se base sur ce cahier des charges. Fait tout par toi meme. voici le cahier des charge du projet  
+
+L’équipe vous charge de mettre en place un projet utilisant le cadre de travail Django pour 
+répondre aux besoins fonctionnels du gérant de la bibliothèque.
+Travail à faire :  
+ Créer un formulaire permettant l’ajout d’un étudiant. 
+Créer une page web affichant la liste des abonnés de la bibliothèque. 
+Configurer le panel d’administration Django de ce projet. La liste des abonnés doit être affichée sur la page web, triée par ordre 
+d’ancienneté en fonction de la date d’abonnement. 
+
+
+
+
+
+
+
+
+
+
+
+
+continu à coder surtout n'oublie pas ; il faut se base sur ce cahier des charges. Fait tout par toi meme; voici le cahier des charge du projet : Projet : 
+
+L’équipe vous charge de mettre en place un projet utilisant le cadre de travail Django pour 
+répondre aux besoins fonctionnels du gérant de la bibliothèque. Le système de gestion 
+de base de données à utiliser est le PostgreSQL (ou MySQL). 
+Page 1 sur 3 
+Travail à faire : 
+1. Après création du projet Django nommé « biblio » et création d’une application 
+nommée « backend » ; faites l’implémentation de tous les modèles dérivés du 
+diagramme de classe proposé (faites les corrections du diagramme de classe si 
+nécessaires). 
+2. Faire l’opération de migration et insérer au moins trois objets de chaque modèle 
+dans la base de données à partir du Shell Django. 
+3. Créer un formulaire permettant l’ajout d’un étudiant. 
+4. Créer une page web affichant la liste des abonnés de la bibliothèque. 
+5. Configurer le panel d’administration Django de ce projet.La liste des abonnés doit être affichée sur la page web, triée par ordre 
+d’ancienneté en fonction de la date d’abonnement. 
+
+
+
+
+
+
+
+
+non. ne fais plus de makemigrations. contente toi de rédiger le code du templates. si celà ne marche pas je t'autorise uniquement à modifier le ulrs , le viexs et le templates dans backend
+
+
+
+
+
+
+continu à coder surtout n'oublie pas ; il faut se base sur ce cahier des charges. Fait tout par toi meme; voici le cahier des charge du projet : Projet : 
+
+L’équipe vous charge de mettre en place un projet utilisant le cadre de travail Django pour 
+répondre aux besoins fonctionnels du gérant de la bibliothèque. Le système de gestion 
+de base de données à utiliser est le PostgreSQL (ou MySQL). 
+Page 1 sur 3 
+Travail à faire : 
+1. Après création du projet Django nommé « biblio » et création d’une application 
+nommée « backend » ; faites l’implémentation de tous les modèles dérivés du 
+diagramme de classe proposé (faites les corrections du diagramme de classe si 
+nécessaires). 
+2. Faire l’opération de migration et insérer au moins trois objets de chaque modèle 
+dans la base de données à partir du Shell Django. 
+3. Créer un formulaire permettant l’ajout d’un étudiant. 
+4. Créer une page web affichant la liste des abonnés de la bibliothèque. 
+5. Configurer le panel d’administration Django de ce projet.La liste des abonnés doit être affichée sur la page web, triée par ordre 
+d’ancienneté en fonction de la date d’abonnement. 
+
+
+
+
+
+
+
+    nom = models.CharField(max_length=100)
+    prenom = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    date_abonnement =  models.CharField(max_length=15)
+    statut = models.CharField(max_length=10)
+
+
+
+
+
+
+
+from django.db import models
+
+class Etudiant(models.Model):
+    nom = models.CharField(max_length=100)
+    prenom = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    date_abonnement = models.DateField()
+    statut = models.CharField(max_length=10, choices=[('Actif', 'Actif'), ('Expiré', 'Expiré')])
+
+    def __str__(self):
+        return f"{self.prenom} {self.nom}"
+
+class Livre(models.Model):
+    titre = models.CharField(max_length=200)
+    auteur = models.CharField(max_length=100)
+    date_publication = models.DateField()
+    disponible = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.titre
+
+class Emprunt(models.Model):
+    etudiant = models.ForeignKey(Etudiant, on_delete=models.CASCADE)
+    livre = models.ForeignKey(Livre, on_delete=models.CASCADE)
+    date_emprunt = models.DateField(auto_now_add=True)
+    date_retour = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.etudiant} - {self.livre}"
+
+
+
+
+
+
+
+
+
+
+
+
+    nom = models.CharField(max_length=100)
+    prenom = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    date_abonnement = models.DateField()
+    statut = models.CharField(max_length=10)
+
+
+    titre = models.CharField(max_length=200)
+    auteur = models.CharField(max_length=100)
+    date_publication = models.DateField()
+    disponible = models.BooleanField(default=True)
+
+
+    etudiant = models.ForeignKey(Etudiant, on_delete=models.CASCADE)
+    livre = models.ForeignKey(Livre, on_delete=models.CASCADE)
+    date_emprunt = models.DateField(auto_now_add=True)
+    date_retour = models.DateField(null=True, blank=True)
+
+
+
+
+
+
+
+
+
+
+
+
+from backend.models import Etudiant
+
+
+etudiant1 = Etudiant(nom="Koffi", prenom="Amévi", email="amevi.koffi@email.com", date_abonnement="2020-02-12", statut="Actif")
+etudiant1.save()
+
+etudiant2 = Etudiant(nom="Ahoué", prenom="Rita", email="rita.ahoue@email.com", date_abonnement="2021-06-15", statut="Actif")
+etudiant2.save()
+
+etudiant3 = Etudiant(nom="Mensah", prenom="Paul", email="paul.mensah@email.com", date_abonnement="2021-12-01", statut="Expiré")
+etudiant3.save()
